@@ -105,14 +105,7 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 			successCallback.invoke(value);
 
 		}
-
-	@ReactMethod
-	public void setIntItem(String key, Integer value) {
-
-		initSharedHandler();
-		SharedDataProvider.putSharedIntValue(key,value);
-
-	}
+		
 
 	@ReactMethod
 	public void getIntItem(String key, Callback successCallback){
