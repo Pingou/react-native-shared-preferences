@@ -67,6 +67,14 @@ public class SharedDataProvider {
         SharedHandler.getInstance().putExtra(key, value);
     }
 
+    public static Integer getSharedIntValue(String key) {
+        return SharedHandler.getInstance().getInt(key);
+    }
+
+    public static void putSharedIntValue(String key, Integer value) {
+        SharedHandler.getInstance().putInt(key, value);
+    }
+
     public static void clear() {
         SharedHandler.getInstance().clear();
     }

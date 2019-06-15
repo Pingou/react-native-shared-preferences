@@ -106,6 +106,24 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 
 		}
 
+	@ReactMethod
+	public void setIntItem(String key, Integer value) {
+
+		initSharedHandler();
+		SharedDataProvider.putSharedIntValue(key,value);
+
+	}
+
+	@ReactMethod
+	public void getIntItem(String key, Callback successCallback){
+
+		initSharedHandler();
+		Integer value = SharedDataProvider.getSharedIntValue(key);
+
+		successCallback.invoke(value);
+
+	}
+
 
 	/***
 	 * getItems(): returns Native Array of Preferences for the given values
