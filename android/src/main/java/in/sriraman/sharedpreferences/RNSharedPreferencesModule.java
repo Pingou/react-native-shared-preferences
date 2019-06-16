@@ -117,8 +117,18 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 
 	}
 
+    @ReactMethod
+    public void getBoolItem(String key, Callback successCallback){
 
-	/***
+        initSharedHandler();
+        boolean value = SharedDataProvider.getSharedBoolValue(key);
+
+        successCallback.invoke(value);
+
+    }
+
+
+    /***
 	 * getItems(): returns Native Array of Preferences for the given values
 	 * */
 	@ReactMethod

@@ -71,6 +71,10 @@ public class SharedDataProvider {
         return SharedHandler.getInstance().getInt(key);
     }
 
+    public static boolean getSharedBoolValue(String key) {
+        return SharedHandler.getInstance().getBoolean(key);
+    }
+
     public static void putSharedIntValue(String key, Integer value) {
         SharedHandler.getInstance().putExtra(key, value);
     }
